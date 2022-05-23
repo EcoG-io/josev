@@ -92,7 +92,8 @@ In the upcoming months, we will focus on continuously battle-testing the stack a
 corresponding BPT scenarios.
 For now, ACDP and WPT won't be our top priority, but this may change depending on the market needs.
 
-We also have our own OCPP 2.0.1 implementation in Python, and for the time being, we will keep it out of this open source offer.
+We also have our own OCPP 2.0.1 implementation in Python, and for the time being, we will keep it out of this open
+source offer.
 However, it is also our intention to open source it in the near future.
 
 As initially mentioned, our stack is chiefly based in Python, and despite Python not being the best performing language,
@@ -108,11 +109,11 @@ it later. Okay, so, wait - now you may be asking yourself, "Josev Professional? 
 
 ## Josev Professional Edition
 
-Yes, we are here to support the e-mobility community with our solutions, and we pride ourselves on open sourcing as much as
-possible. At the same time, we want to target a segment of the industry with specific business requirements, eg integrating
-an interface for a OEM power electronics module that uses CAN, a module to interface with a specific RFID reader or through
-ModBus with a smart meter. And to answer those needs, we want to provide a dedicated and professional offer, and that offer
-is "Josev Professional" (or Josev Pro for short).
+Yes, we are here to support the e-mobility community with our solutions, and we pride ourselves on open sourcing as much
+as possible. At the same time, we want to target a segment of the industry with specific business requirements,
+eg integrating an interface for a OEM power electronics module that uses CAN, a module to interface with a specific
+RFID reader or through ModBus with a smart meter. And to answer those needs, we want to provide a dedicated and
+professional offer, and that offer is "Josev Professional" (or Josev Pro for short).
 
 Josev Pro inclues all that Josev Community Edition has plus:
 
