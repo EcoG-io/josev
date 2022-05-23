@@ -1,57 +1,77 @@
-# Josev - Joint Operating System for Seemless EV charging
+# Josev - Joint Operating System for Seamless EV charging
 
-The community version of Josev - An Operating System for the V2G charging Stations
+The community version of Josev - An Operating System for the V2G charging stations
 
-Josev or Joint Operating System for Seemless EV charging is an open source stack containing modules that together function as the brain of a charging station, enabling V2G communication and pushing forward EV adoption, by reducing interoperability issues.
+Josev or Joint Operating System for Seamless EV charging is an open source stack containing modules that together function as the brain of a charging station, enabling V2G communication and pushing forward EV adoption, by reducing interoperability issues.
 
-Josev was designed with modularity in its heart and is based in modern technologies, being the majority of the code in Python.
-
-
-# What does the project includes?
-
-Josev Community version at the moment is the compilation of the following modules which individually live in their own repository:
-
-* ISO 15118 (name to be redefined): https://github.com/SwitchEV/iso15118
-* SLAC - https://github.com/SwitchEV/slac
-
-The aforementioned repos include installation and run steps, examples and a CI/CD based on GitHub actions that will run the tests and performs code quality checks.
+Josev was designed with modularity in its heart and is based in modern technologies, being the majority of the code currently in Python.
 
 
-The [ISO 15118] repo provides the following features:
 
-|              	| AC 	| DC 	| AC BPT 	| DC BPT 	| ACDP 	| WPT 	| EIM 	| PnC 	|
-|--------------	|----	|----	|--------	|--------	|------	|-----	|-----	|-----	|
-| DIN 70121    	|  - 	|  ✅ 	|    -   |    -   	|   -  	|  -  	|  ✅  	|     	|
-| ISO 15118-2  	|  ✅ 	|  ✅ 	|    -   	|    -   	|   -  	|  -  	|  ✅  	|  ✅  	|
-| ISO 15118-20 	|  ✅ 	|  ✅ 	|    ✅   	|   ❌  	|  ❌ 	| ❌ 	|  ✅  	|  ✅* 	|
+## What does the project includes?
+
+Josev Community version, at the moment, is the compilation of the following modules which individually live in their own repository:
+
+* `iso15118`: https://github.com/SwitchEV/iso15118
+* `slac`: https://github.com/SwitchEV/slac
+
+The aforementioned repos include installation and run steps, examples and a CI/CD based on GitHub actions that will run the tests and performs code quality checks that once pass do an automatic release of each module as a python package to the public pypi server.
+
+
+
+The `iso15118` repo provides the following features:
+
+|                	| AC 	| DC 	| AC BPT 	| DC BPT 	| ACDP 	| WPT 	| EIM 	| PnC 	|
+|----------------	|----	|----	|--------	|--------	|------	|-----	|-----	|-----	|
+| ISO 15118-2    	|  ✅ 	|  ✅ 	|    -   	|    -   	|   -  	|  -  	|  ✅  	|  ✅  	|
+| ISO 15118-20   	|  ✅ 	|  ✅ 	|    ✅   	|   :x:  	|  :x: 	| :x: 	|  ✅  	|  ✅* 	|
+| DIN SPEC 70121 	|  - 	|  ✅ 	|    -   	|    -   	|   -  	|  -  	|  ✅  	|     	|
 
 * PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
 
 
-# How to spin it up?
+
+## Why naming the repos `iso15118` and `slac`?
+
+As it can be observed, the `iso15118` repo, despite of the name, it also includes support for the DIN SPEC 70121. Switch believes that the way forward to a future where a secure, reliable and seemless charging experience can be achieved is by pushing the ISO 15118 standards and for that reason we instigate people to adopt the ISO 15118 over the DIN SPEC 70121. However, we do understand the current market needs and the fact that there are thousands of Electric Vehicles (EVs) which only support the DIN SPEC, the so called "legacy EVs"; thus we do provide support for the DIN SPEC, but we restrain ourselves of promoting it.
+
+The reason to have two repos one for the high-level communication, the `iso15118`, and another for `slac`, is first to resemble a micro services architecture where future updates are atomic and smaller, it is also due to separation of concerns as slac deals with the Physical anda Data link layers (OSI layers 1 and 2), whilst iso15118 deals with the Network, Transport, Session, Presentation and Application layers of the OSI stack (layers 3-7). And finally, the names match the lingo used in the community where `iso15118`is generally used to discuss high level communication topics and `slac` to describe the protocol defined in ISO 15118-3.
+
+
+
+## How to spin it up?
 
 As the project is a collection of modules, each module can be independently used. As the [ISO 15118] modules requires some integration from the user side, specifically with the EVSE/EVCC controller part, it makes no sense to create a set of commands here to fire up both the [ISO 15118] and slac modules.
 Thus, to use the project, please folow the instructions specified in each of the repos.
  
 
 
-# What are some caveats and what are the next goals?
+## What are some caveats and what are the next goals?
 
-* Documentation 
-* More Tests
-* work on the currently unsupported features of ISO 15118-20
+As mentioned, the project includes unit testing for each published module, but the coverage of the tests needs to be improved.
+However, despite the fact we lack more test cases, the system was subject of intense field testing. Specifically, we tested the project successfuly in the following international and widely recognized events:
+
+* [CharIN Europe Testival](https://www.charin.global/events/testival-europe/) 
+* [Vector vTESTival](https://www.vector.com/de/de/events/global-de-en/2022/vector-e-mobility-symposium-2022/#c284443) 
+
+The system was also subject to the conformance testing for the ISO 15118. 
+The tests were done using the Keysight conformance test system (comTEST) containining the [SL1459A EVSE DIN 70122 & ISO 15118-4/-5:2018 AC/DC & PNC Conformance Bundle](https://www.keysight.com/gb/en/assets/3120-1491/data-sheets/SL14XXA-Scienlab-Test-Case-Library-TTCN-3.pdf)
+
+A list of the tests that the SUT (System Under Test) was subject to, including the tests that the system currently didnt pass can be found in the tests directory.
 
 
-# How to Contribute?
+
+
+## How to Contribute?
 ...
 
 
-# Questions/Issues
-For generic questions regarding Josev as whole we invite the user to create an issue in this repository.
-To report an issue or raise a question related to a specific module, we encorage you to create an issue directly in the repository where the question aplies. For example, if you found a bug while running the ISO 15118 repo, then, please, open an issue in that repo.
+## Questions/Issues
+For generic questions regarding Josev as a whole we invite the user to create an issue in this repository.
+To report an issue or raise a question related to a specific module/service, we encorage you to create an issue directly in the repository where the question aplies. For example, if you found a bug while running the [ISO 15118] repo, then, please, open an issue in that repo.
 
 
-# License
+## License
 Copyright [2022] [Switch-EV]
 
 All Switch-EV content and modules are under the Apache License, Version 2.0 (the "License");
