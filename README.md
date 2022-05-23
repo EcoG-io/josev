@@ -1,3 +1,5 @@
+![Switch Logo](docs/switch_white_logo.svg)
+
 # Josev - Joint Operating System for Seamless EV charging
 
 The community version of Josev - An Operating System for the V2G charging stations
