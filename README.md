@@ -33,27 +33,20 @@ The `iso15118` repo provides the following services and features:
 |----------------------	|:--:	|:--:	|:------:	|:------:	|:-------:	|:-----------:	|:---:	|:---:	|:---:	|
 | ISO 15118-2     [^1] 	|  ✅ 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|  ✅  	|  ✅  	|
 | ISO 15118-20    [^2] 	|  ✅ 	|  ✅ 	|    ✅   	|    ✔️   	|    ❌    	|      ❌      	|  ❌  	|  ✅  	|  ✅* 	|
-| DIN SPEC 70121  [^3] 	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|     	|  -  	|
+| DIN SPEC 70121  [^4] 	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|     	|  -  	|
 
+"✅" -Fully Supported
+"✔"  -Partially Supported
+"❌" -Not Supported at the moment
+"-"  -Not Applicable
 
-|                 	| AC 	| DC 	| AC BPT 	| DC BPT 	| DC ACDP 	| DC ACDP BPT 	| WPT 	| EIM 	| PnC 	|
-|-----------------	|:--:	|:--:	|:------:	|:------:	|:-------:	|:-----------:	|:---:	|:---:	|:---:	|
-| ISO 15118-2     	|  ✅ 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|  ✅  	|  ✅  	|
-| ISO 15118-20    	|  ✅ 	|  ✅ 	|    ✅   	|    ✔️   	|    ❌    	|      ❌      	|  ❌  	|  ✅  	|  ✅* 	|
-| DIN SPEC 70121  	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|     	|  -  	|
-
-✅ - Fully Supported
-✔️ - Partially Supported
-❌ - Not Supported at the moment
-- Not Applicable
-- 
 * PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
 
 
 
 ## Why name the repos `iso15118` and `slac`?
 
-As it can be observed, the `iso15118` repo, despite the name, it also includes support for the DIN SPEC 70121 [^2].
+As it can be observed, the `iso15118` repo, despite the name, it also includes support for the DIN SPEC 70121.
 Switch believes that the way forward to a future where a secure, reliable and seamless charging experience can be
 achieved is by pushing the ISO 15118 standards and for that reason we instigate people to adopt the ISO 15118 over
 the DIN SPEC 70121. However, we do understand the current market needs and the fact that there are thousands of
@@ -65,7 +58,7 @@ mimic a micro-services architecture where future updates are atomic and smaller,
 concerns as slac deals with the Physical anda Data link layers (OSI layers 1 and 2), whilst iso15118 deals with the
 Network, Transport, Session, Presentation and Application layers of the OSI stack (layers 3-7). And finally, the names
 match the lingo used in the community where `iso15118` is generally used to discuss high level communication topics and
-`slac` to describe the protocol defined in ISO 15118-3.
+`slac` to describe the protocol defined in ISO 15118-3 [^3].
 
 
 
@@ -174,6 +167,7 @@ limitations under the License.
 
 [^1]: https://www.iso.org/standard/55366.html
 [^2]: https://www.iso.org/standard/77845.html
-[^3]: https://standards.globalspec.com/std/9884003/DIN%20SPEC%2070121
-[^4]: https://exificient.github.io/
+[^3]: https://www.iso.org/standard/59675.html
+[^4]: https://standards.globalspec.com/std/9884003/DIN%20SPEC%2070121
+[^5]: https://exificient.github.io/
 
