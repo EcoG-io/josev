@@ -36,8 +36,11 @@ The `iso15118` repo provides the following services and features:
 | DIN SPEC 70121  [^4] 	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|     	|  -  	|
 
 "✅" -Fully Supported
+
 "✔"  -Partially Supported
+
 "❌" -Not Supported at the moment
+
 "-"  -Not Applicable
 
 * PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
