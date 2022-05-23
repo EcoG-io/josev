@@ -32,7 +32,7 @@ The `iso15118` repo provides the following services and features:
 |                      	| AC 	| DC 	| AC BPT 	| DC BPT 	| DC ACDP 	| DC ACDP BPT 	| WPT 	| EIM 	| PnC 	|
 |----------------------	|:--:	|:--:	|:------:	|:------:	|:-------:	|:-----------:	|:---:	|:---:	|:---:	|
 | ISO 15118-2     [^1] 	|  ✅ 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|  ✅  	|  ✅  	|
-| ISO 15118-20    [^2] 	|  ✅ 	|  ✅ 	|    ✅   	|    ✔️   	|    ❌    	|      ❌      	|  ❌  	|  ✅  	|  ✅* 	|
+| ISO 15118-20    [^2] 	|  ✅ 	|  ✅ 	|    ✅   	|    ✔️   	|    ❌    	|      ❌      	|  ❌  	|  ✅  	|  ✅[^5] 	|
 | DIN SPEC 70121  [^4] 	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|     	|  -  	|
 
 "✅" -Fully Supported
@@ -43,7 +43,7 @@ The `iso15118` repo provides the following services and features:
 
 "-"  -Not Applicable
 
-* PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
+*
 
 
 
@@ -122,8 +122,8 @@ And to answer to those needs we thought about providing a more dedicated and pro
 
 Josev Pro inclues all that Josev Community Edition has plus:
 * OCPP 2.0.1 
-* REXI - A Rust version of the EXI en/decoder, which is much faster than the available open source solutions and has
-ISO 15118-20 support
+* REXI - A Rust version of the EXI en/decoder, which is at least x100 faster than the available open source solutions
+and has ISO 15118-20 support
 * An Over-the-Air (OTA) service - Allowing your product to receive the latest release versions of Josev with new
 features and possible fixes
 * RFID module interface
@@ -172,5 +172,6 @@ limitations under the License.
 [^2]: https://www.iso.org/standard/77845.html
 [^3]: https://www.iso.org/standard/59675.html
 [^4]: https://standards.globalspec.com/std/9884003/DIN%20SPEC%2070121
-[^5]: https://exificient.github.io/
+[^5]: PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
+[^6]: https://exificient.github.io/
 
