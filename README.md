@@ -1,10 +1,10 @@
 ![Switch Logo](docs/switch_white_logo.svg)
 
-# Josev - Joint Operating System for Seamless EV charging
+# Josev - Joint Operating System for EV chargers
 
 Josev Community is the #opensource version of Josev - an operating system for the V2G charging stations.
 
-Josev (Joint Operating System for Seamless EV charging) is an open source stack containing modules that, together,
+Josev (Joint Operating System for EV chargers) is an open source stack containing modules that, together,
 function as the brain of a charging station, enabling Vehicle-to-Grid (V2G) communication and pushing forward EV
 adoption by reducing interoperability issues.
 
