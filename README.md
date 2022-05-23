@@ -120,7 +120,7 @@ And to answer to those needs we thought about providing a more dedicated and pro
 Josev Pro inclues all that Josev Community Edition has plus:
 * OCPP 2.0.1 
 * REXI - A Rust version of the EXI en/decoder, which is at least x100 faster than the available open source solutions
-and has ISO 15118-20 support
+and has ISO 15118-20 support (check [here](docs/rexi_performance.png) )
 * An Over-the-Air (OTA) service - Allowing your product to receive the latest release versions of Josev with new
 features and possible fixes
 * RFID module interface
@@ -144,8 +144,8 @@ If you are interested and what to know more, please contact us:
 ## Questions/Issues
 
 For generic questions regarding Josev as a whole we invite the user to create an issue in this repository.
-To report an issue or raise a question related to a specific module/service, we encorage you to create an issue
-directly in the repository where the question aplies. For example, if you found a bug while running the [ISO 15118]
+To report an issue or raise a question related to a specific module/service, we encourage you to create an issue
+directly in the repository where the question aplies. For example, if you found a bug while running the `iso15118`
 repo, then, please, open an issue in that repo.
 
 
