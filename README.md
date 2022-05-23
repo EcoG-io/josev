@@ -19,13 +19,13 @@ The aforementioned repos include installation and run steps, examples and a CI/C
 
 
 
-The `iso15118` repo provides the following features:
+The `iso15118` repo provides the following services and features:
 
-|                	| AC 	| DC 	| AC BPT 	| DC BPT 	| ACDP 	| WPT 	| EIM 	| PnC 	|
-|----------------	|----	|----	|--------	|--------	|------	|-----	|-----	|-----	|
-| ISO 15118-2    	|  ✅ 	|  ✅ 	|    -   	|    -   	|   -  	|  -  	|  ✅  	|  ✅  	|
-| ISO 15118-20   	|  ✅ 	|  ✅ 	|    ✅   	|   :x:  	|  :x: 	| :x: 	|  ✅  	|  ✅* 	|
-| DIN SPEC 70121 	|  - 	|  ✅ 	|    -   	|    -   	|   -  	|  -  	|  ✅  	|     	|
+|                	| AC 	| DC 	| AC BPT 	| DC BPT 	| DC ACDP 	| DC ACDP BPT 	| WPT 	| EIM 	| PnC 	|
+|----------------	|:--:	|:--:	|:------:	|:------:	|:-------:	|:-----------:	|:---:	|:---:	|:---:	|
+| DIN SPEC 70121 	|  - 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|  ✅  	|     	|
+| ISO 15118-2    	|  ✅ 	|  ✅ 	|    -   	|    -   	|    -    	|      -      	|  -  	|  ✅  	|  ✅  	|
+| ISO 15118-20   	|  ✅ 	|  ✅ 	|    ✅   	|   :x:  	|   :x:   	|     :x:     	| :x: 	|  ✅  	|  ✅* 	|
 
 * PnC in ISO 15118-20 requires TLS v1.3 and a new set of cryptography suites that still need to be implemented
 
@@ -46,7 +46,7 @@ Thus, to use the project, please folow the instructions specified in each of the
  
 
 
-## What are some caveats and what are the next goals?
+## Caveats and shortcomings
 
 As mentioned, the project includes unit testing for each published module, but the coverage of the tests needs to be improved.
 However, despite the fact we lack more test cases, the system was subject of intense field testing. Specifically, we tested the project successfuly in the following international and widely recognized events:
@@ -60,13 +60,48 @@ The tests were done using the Keysight conformance test system (comTEST) contain
 A list of the tests that the SUT (System Under Test) was subject to, including the tests that the system currently didnt pass can be found in the tests directory.
 
 
+## What are the next goals?
+
+The stack will keep groing and is our goal to support all the features described by the ISO 15118-2 and -20 chapters.
+For the upcoming months we will be focused on continuously battle testing the stack and to solidify all the AC/DC and corresponding BPT scenarios.
+For now, ACDP and WPT wont be our top priority, but this may change depending on the market needs.
+
+We also have our own OCPP 2.0.1 implementation in Python and for the time being we will keep it out of this open source offer, but it is also our intention to open source it in the near future.
+
+As initially mentioned, our stack is majorly based in Python and despite Python not being the most performant language, after several interoperability tests we detected no requirements violation of the standard. 
+
+Nevertheless, we believe the solution we want to offer to the community must be robust, reliable, safe, easily maintainable and easily distributable and for those reasons is our intention to partially or totally convert our stack to Rust, a very strongly statically-typed multi-paradigm programming language that’s focused on safety and performance and suitable for embedded devices. 
+
+At first we will provide this solution into our non-free Josev Professional edition, but we may also open source it later. Wait, now you may are asking  yourself: "Josev Professional? What is that after all?"
+
+
+## Josev Professional Edition
+Yes, we are here to support the e-mobility community with our solutions and pride for open sourcing as much as possible, but we also want to target a segment of the industry that has specific business requirements, e.g., integrating an interface for a OEM power electronics module that uses CAN or a module to interface with a specific RFID reader. And to answer to those needs we thought about providing a more dedicated and professional offer that we called "Josev Professional or Josev Pro".
+
+Josev Pro inclues all that Josev Community Edition has plus:
+* OCPP 2.0.1 
+* REXI - A Rust version of the EXI en/decoder, which is much faster than the available open source solutions and has ISO 15118-20 support
+* An Over-the-Air (OTA) service - Allowing your product to receive the latest release versions of Josev with new features and possible fixes
+* RFID module interface
+* Power Electronics module interface
+* Lifetime support from our Switch engineers and specialits
+* And more...
+
+Josev Pro requires a Linux based OS and runs in all major archs: `armv7`, `armv8`, `x86_64`.
+
+If you are interested and what to know more, please contact us:
+<email, booking link to Stewart..>
 
 
 ## How to Contribute?
 ...
 
 
+
+
+
 ## Questions/Issues
+
 For generic questions regarding Josev as a whole we invite the user to create an issue in this repository.
 To report an issue or raise a question related to a specific module/service, we encorage you to create an issue directly in the repository where the question aplies. For example, if you found a bug while running the [ISO 15118] repo, then, please, open an issue in that repo.
 
