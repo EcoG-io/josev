@@ -2,7 +2,7 @@
 
 # Josev - Joint Operating System for EV chargers
 
-Josev Community is the #opensource version of Josev - an operating system for the V2G charging stations.
+Josev Community is the open source version of Josev - an operating system for the V2G charging stations.
 
 Josev (Joint Operating System for EV chargers) is an open source stack containing modules that, together,
 function as the brain of a charging station, enabling Vehicle-to-Grid (V2G) communication and pushing forward EV
@@ -10,11 +10,6 @@ adoption by reducing interoperability issues.
 
 Josev was designed with modularity at heart. It is based in modern technologies, with the majority of the code
 currently in Python.
-
-## What does the project include?
-
-Josev Community version, at the moment, is the compilation of the following modules which individually live in their
-own repository:
 
 ## What does the project include?
 
@@ -26,7 +21,7 @@ their own repository:
 * `slac`: https://github.com/SwitchEV/slac
 
 The aforementioned repos include: installation and run steps; examples; and a CI/CD based on GitHub actions that
-will run tests and perform code quality checks. Once a new release is made a Python package is published to the
+will run tests and perform code quality checks. Once a new release is made, a Python package is published to the
 public pypi server.
 
 The `iso15118`repo provides the following services and features:
@@ -35,7 +30,7 @@ The `iso15118`repo provides the following services and features:
 | ------------------- | :-: | :-: | :----: | :----: | :-----: | :---------: | :-: | :-: | :-----: |
 | ISO 15118-2 [^1]    | ✅  | ✅  |   -    |   -    |    -    |      -      |  -  | ✅  |   ✅    |
 | ISO 15118-20 [^2]   | ✅  | ✅  |   ✅   |   ✔️   |   ❌    |     ❌      | ❌  | ✅  | ✅ [^5] |
-| DIN SPEC 70121 [^4] |  -  | ✅  |   -    |   -    |    -    |      -      |  -  |     |    -    |
+| DIN SPEC 70121 [^4] |  -  | ✅  |   -    |   -    |    -    |      -      |  -  |  ✅   |    -    |
 
 "✅" -Fully Supported
 
@@ -47,15 +42,14 @@ The `iso15118`repo provides the following services and features:
 
 ## Why name the repos `iso15118` and `slac`?
 
-As it can be observed, the `iso15118` repo, despite the name, also includes support for the DIN SPEC 70121.
+The `iso15118` repo, despite the name, also includes support for DIN SPEC 70121.
 Switch believes that the way forward to a future where a secure, reliable and seamless charging experience can be
-achieved is by pushing the ISO 15118 standards and for that reason we instigate people to adopt the ISO 15118 over
-the DIN SPEC 70121. However, we do understand the current market needs and the fact that there are thousands of
-Electric Vehicles (EVs) which only support the DIN SPEC (the so-called "legacy EVs"); thus we do provide support
-for the DIN SPEC, but we restrain ourselves from promoting it.
+achieved is by pushing the ISO 15118 standards. For that reason we instigate people to adopt the ISO 15118 over DIN SPEC 70121. However, we do understand the current market needs and the fact that there are thousands of
+Electric Vehicles (EVs) which only support DIN SPEC (the so-called "legacy EVs"); thus we do provide support
+for DIN SPEC, but we restrain ourselves from promoting it.
 
 Why do we have two repos, one for the high-level communication (the `iso15118`) and another for `slac`? The first
-reason is to a mimic microservices architecture where future updates are atomic and smaller. Secondly, it's due to
+reason is to mimic a microservices architecture where future updates are atomic and smaller. Secondly, it's due to
 separation of concerns, as `slac` deals with the Physical and Data link layers (OSI layers 1 and 2), whilst `iso15118`
 deals with the Network, Transport, Session, Presentation and Application layers of the OSI stack (layers 3-7).
 Thirdly, the names match the language used in the community where `iso15118`is generally used to discuss high-level
@@ -75,10 +69,10 @@ improved.
 To compensante that shortcoming, the system was subject to intense field-testing. Specifically, we tested the project
 successfully in the following international and widely recognized events:
 
-- [CharIN Europe Testival](https://www.charin.global/events/testival-europe/)
+- [CharIN Testivals](https://www.charin.global/events/global-testivals/)
 - [Vector vTESTival](https://www.vector.com/de/de/events/global-de-en/2022/vector-e-mobility-symposium-2022/#c284443)
 
-The system was also subject to the conformance testing for the ISO 15118.
+The system was also subject to conformance testing for ISO 15118.
 The tests were done using the Keysight conformance test system (comTEST), containing the
 [SL1459A EVSE DIN 70122 & ISO 15118-4/-5:2018 AC/DC & PNC Conformance Bundle](https://www.keysight.com/gb/en/assets/3120-1491/data-sheets/SL14XXA-Scienlab-Test-Case-Library-TTCN-3.pdf)
 
@@ -92,17 +86,13 @@ In the upcoming months, we will focus on continuously battle-testing the stack a
 corresponding BPT scenarios.
 For now, ACDP and WPT won't be our top priority, but this may change depending on the market needs.
 
-We also have our own OCPP 2.0.1 implementation in Python, and for the time being, we will keep it out of this open
-source offer.
-However, it is also our intention to open source it in the near future.
-
-As initially mentioned, our stack is chiefly based in Python, and despite Python not being the best performing language,
+As initially mentioned, our stack is mainly based in Python, and despite Python not being the best performing language,
 after several interoperability tests, we detected no timing performance issues or any indication that would violate
 the requirements specified by the standard.
 
 Nevertheless, we believe the solution we offer to the community must be robust, reliable, safe, easily maintainable and
 easily distributable. For those reasons, it's our intention to partially or totally convert our stack to Rust, a strongly
-statically typed, multi-paradigm programming language focussing on safety and performance, suitable for embedded devices
+statically typed, multi-paradigm programming language focussing on safety and performance, suitable for embedded devices.
 
 At first, we will provide this solution as part of our fee-paying Josev Professional edition, but we may also open source
 it later. Okay, so, wait - now you may be asking yourself, "Josev Professional? What's that?" Read on.
@@ -120,8 +110,9 @@ Josev Pro inclues all that Josev Community Edition has plus:
 - OCPP 2.0.1
 - REXI - A Rust version of the EXI en/decoder, which is at least x100 faster than the available open source solutions
   and has ISO 15118-20 support (check [here](docs/rexi_performance.png) )
-- An Over-the-Air (OTA) service - Allowing your product to receive the latest release versions of Josev with new
+- An Over-the-Air (OTA) update service - Allowing your product to receive the latest release versions of Josev with new
   features and possible fixes
+- An MQTT message broker and well defined API to interact with OEM-specific code (and between the ISO 15118, SLAC, and OCPP 2.0.1 modules)
 - RFID module interface
 - Power Electronics module interface
 - Lifetime support from our Switch engineers and specialists
@@ -140,14 +131,14 @@ If you are interested and want to know more, we'd love to talk, so please contac
 
 For generic questions regarding Josev as a whole we invite the user to create an issue in this repository.
 To report an issue or raise a question related to a specific module/service, we encourage you to create an issue
-directly in the repository where the question aplies. For example, if you found a bug while running the `iso15118`
+directly in the repository to which the question applies. For example, if you found a bug while running the `iso15118`
 repo, then, please, open an issue in that repo.
 
 ## License
 
 Copyright [2022] [Switch-EV]
 
-All Switch-EV content and modules are under the Apache License, Version 2.0 (the "License");
+All Switch content and modules are under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
