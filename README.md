@@ -18,7 +18,7 @@ their own repository:
 
 - `iso15118`: https://github.com/SwitchEV/iso15118
 
-* `slac`: https://github.com/SwitchEV/slac
+* `slac`: https://github.com/SwitchEV/pyslac
 
 The aforementioned repos include: installation and run steps; examples; and a CI/CD based on GitHub actions that
 will run tests and perform code quality checks. Once a new release is made, a Python package is published to the
