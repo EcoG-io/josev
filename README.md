@@ -18,7 +18,7 @@ their own repository:
 
 - `iso15118`: https://github.com/SwitchEV/iso15118
 
-* `slac`: https://github.com/SwitchEV/pyslac
+* `pyslac`: https://github.com/SwitchEV/pyslac
 
 The aforementioned repos include: installation and run steps; examples; and a CI/CD based on GitHub actions that
 will run tests and perform code quality checks. Once a new release is made, a Python package is published to the
@@ -40,7 +40,7 @@ The `iso15118`repo provides the following services and features:
 
 "-" -Not Applicable
 
-## Why name the repos `iso15118` and `slac`?
+## Why name the repos `iso15118` and `pyslac`?
 
 The `iso15118` repo, despite the name, also includes support for DIN SPEC 70121.
 Switch believes that the way forward to a future where a secure, reliable and seamless charging experience can be
@@ -48,18 +48,19 @@ achieved is by pushing the ISO 15118 standards. For that reason we instigate peo
 Electric Vehicles (EVs) which only support DIN SPEC (the so-called "legacy EVs"); thus we do provide support
 for DIN SPEC, but we restrain ourselves from promoting it.
 
-Why do we have two repos, one for the high-level communication (the `iso15118`) and another for `slac`? The first
+Why do we have two repos, one for the high-level communication (the `iso15118`) and another for `pyslac`? The first
 reason is to mimic a microservices architecture where future updates are atomic and smaller. Secondly, it's due to
-separation of concerns, as `slac` deals with the Physical and Data link layers (OSI layers 1 and 2), whilst `iso15118`
+separation of concerns, as `pyslac` deals with the Physical and Data link layers (OSI layers 1 and 2), whilst `iso15118`
 deals with the Network, Transport, Session, Presentation and Application layers of the OSI stack (layers 3-7).
 Thirdly, the names match the language used in the community where `iso15118`is generally used to discuss high-level
-communication topics and `slac` to describe the protocol defined in ISO 15118-3. [^3].
+communication. `pyslac` was named with the prefix `py` as apparently there is a conflict with the name `slac` in the
+public pypi server, but we internally refer to it as `slac`, which describes the protocol defined in ISO 15118-3. [^3].
 
 ## How to spin it up?
 
 As the project is a collection of modules, each module can be independently used. As the `iso15118` modules requires
 some integration from the user side, specifically with the EVSE/EVCC controller part, it makes no sense to create a
-set of commands here to fire up both the `iso15118` and `slac` modules.
+set of commands here to fire up both the `iso15118` and `pyslac` modules.
 Thus, to use the project, please follow the instructions specified in each of the repos.
 
 ## Caveats and shortcomings
