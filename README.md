@@ -126,7 +126,11 @@ If you are interested and want to know more, we'd love to talk, so please contac
 
 ## How to Contribute?
 
-You can contribute by raising issues for any bugs you find and providing pull requests.
+You can contribute by raising issues for any bugs you find and providing pull requests (PRs)
+to the repos mentioned before.
+Every PR will be audited by at least one member of the Switch team. On top of that a GitHub
+workflow is activated for each PR which runs tests and code quality checks like linting and 
+code style.
 
 ## Questions/Issues
 
