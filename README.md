@@ -108,6 +108,8 @@ professional offer, and that offer is "Josev Professional" (or Josev Pro for sho
 Josev Pro inclues all that Josev Community Edition has plus:
 
 - OCPP 2.0.1
+- Granular insight into EV to charger communication using Switch's cloud-based EV charger management platform. 
+  Helps for better debugging when ISO 15118 communication issues arise.
 - REXI - A Rust version of the EXI en/decoder, which is at least x100 faster than the available open source solutions
   and has ISO 15118-20 support (check [here](docs/rexi_performance.png) )
 - An Over-the-Air (OTA) update service - Allowing your product to receive the latest release versions of Josev with new
