@@ -1,4 +1,4 @@
-![Switch Logo](docs/switch_white_logo.svg)
+![Switch Logo](docs/switch_logo_black.svg)
 
 # Josev - Joint Operating System for EV chargers
 
@@ -120,12 +120,13 @@ Josev Pro inclues all that Josev Community Edition has plus:
 
 Josev Pro requires a Linux based OS and runs in all major archs: `armv7`, `armv8`, `x86_64`.
 
-If you are interested and want to know more, we'd love to talk, so please contact us here today:
-<email, booking link to Stewart..>
+If you are interested and want to know more, we'd love to talk, so please contact us here today: 
+- stewart@switch-ev.com
+- [Book a call](https://meetings-eu1.hubspot.com/stewart-mckee)
 
 ## How to Contribute?
 
-...
+You can contribute by raising issues for any bugs you find and providing pull requests.
 
 ## Questions/Issues
 
