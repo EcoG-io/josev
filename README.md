@@ -1,4 +1,4 @@
-![Switch Logo](docs/switch_logo_black.svg)
+![Switch Logo](docs/switch_logo.svg)
 
 # Josev - Joint Operating System for EV chargers
 
