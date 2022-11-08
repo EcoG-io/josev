@@ -49,9 +49,9 @@
 | 47    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_CMN_VTB_V2GTPSDP_003                    | ✅      |          | 
 | 48    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_CMN_VTB_V2GTPSDP_004                    | ✅      |          |
 | 49    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_CMN_VTB_V2GTPSDP_005                    | ✅      | 
-| 47    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_CableCheck_001                   | ✅      |          | 
-| 48    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PreCharge_001                    | ✅      |          |
-| 49    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_001                | ✅      |
-| 50    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_002                | ✅      |          | 
-| 51    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_014                | ✅      |          |
+| 50    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_CableCheck_001                   | ✅      |          | 
+| 51    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PreCharge_001                    | ✅      |          |
 | 52    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_001                | ✅      |
+| 53    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_002                | ✅      |          | 
+| 54    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_014                | ✅      |          |
+| 55    | TestcaseList_SECC_DC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_DC_VTB_PowerDelivery_001                | ✅      |
