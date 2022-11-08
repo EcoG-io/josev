@@ -27,7 +27,7 @@
 | 25    | TestcaseList_SECC_AC_ISO_15118_3_2021-08-06_1814_pub | TC_SECC_CMN_VTB_PLCLinkStatus_004               | ✅      |          |
 | 26    | TestcaseList_SECC_AC_ISO_15118_3_2021-08-06_1814_pub | TC_SECC_CMN_VTB_CmValidate_011                  | ❌      |          |
 | 27    | TestcaseList_SECC_AC_ISO_15118_3_2021-08-06_1814_pub | TC_SECC_CMN_VTB_CmValidate_012                  | ❌      |          |
- | 28    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_CMN_VTB_ChargeParameterDiscovery_015    | ✅      |          |
+| 28    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_CMN_VTB_ChargeParameterDiscovery_015    | ✅      |          |
 | 29    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_AC_VTB_ChargeParameterDiscovery_010     | ✅      |          |
 | 30    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_AC_VTB_ChargeParameterDiscovery_006     | ✅      |          |
 | 31    | TestcaseList_SECC_AC_ISO_15118_2_2021-08-06_1814_pub | TC_SECC_AC_VTB_PowerDelivery_002                | ✅      |          | 
