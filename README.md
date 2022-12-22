@@ -29,7 +29,7 @@ The `iso15118`repo provides the following services and features:
 |                     | AC  | DC  | AC BPT | DC BPT | DC ACDP | DC ACDP BPT | WPT | EIM |   PnC   |
 | ------------------- | :-: | :-: | :----: | :----: | :-----: | :---------: | :-: | :-: | :-----: |
 | ISO 15118-2 [^1]    | ✅  | ✅  |   -    |   -    |    -    |      -      |  -  | ✅  |   ✅    |
-| ISO 15118-20 [^2]   | ✅  | ✅  |   ✅   |   ✔️   |   ❌    |     ❌      | ❌  | ✅  | ✅ [^5] |
+| ISO 15118-20 [^2]   | ✅  | ✅  |   ✅   |   ✅   |   ❌    |     ❌      | ❌  | ✅  | ✅ [^5] |
 | DIN SPEC 70121 [^4] |  -  | ✅  |   -    |   -    |    -    |      -      |  -  |  ✅   |    -    |
 
 "✅" -Fully Supported
